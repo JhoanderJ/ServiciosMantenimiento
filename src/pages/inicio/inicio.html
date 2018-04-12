@@ -1,0 +1,29 @@
+
+<ion-header>
+    
+    <ion-navbar color="amarillo">
+        <ion-buttons left >
+            <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+          </ion-buttons>
+      <ion-title text-center>Inicio</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <ion-list inset no-lines>
+          <button ion-item [navPush]="programarservicioPage" 
+                          [navParams]=servicios
+              *ngFor="let servicios of listaServicios">
+              <ion-avatar item-left>
+                <img src="../../assets/imgs/{{servicios.imagen}}" alt="">
+              </ion-avatar>
+           <h2>{{servicios.nombre}}</h2> 
+          </button>
+        </ion-list>
+
+  </ion-content>
+  

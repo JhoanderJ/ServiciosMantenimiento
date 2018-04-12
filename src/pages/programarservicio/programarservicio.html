@@ -1,0 +1,35 @@
+
+<ion-header>
+
+  <ion-navbar color="amarillo">
+      <ion-buttons start left>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title text-center>{{programars.nombre}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <h2 text-center padding-horizontal margin text-uppercase class="text-info ">¿Cuando necesitas el servicio?</h2>
+    <div class="card border-warning mb-3" style="max-width: 18rem;margin-left: 25%;">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQxSURBVHhe7ZxPiE1hGMaPP/eeO4wkScoGyb9Y2IiNhSIUS1Y2QsqfjZUsyQJlFnYsJxmlJBszuvfcGUSjJDZig4TFbAgTvuM51zu6zbz3nG/u+c65uuf51VOzuOc5X8/357xz73uvRwghhBBCCCGEkE5j7vsrwsAPXcvU/GdyCxKHqZVPaAGmFXxPyi1IHCbw72oBphFW/7ip9y6SW5BWmIdeD8L6poWYRpjUW3ILEgeOiV1agGkF3z1yCxIHVmqfFmAaIfxP4ahXkluQOExQfq2FmEaY1EtiT+LIrvwsrZdbkDgyKT9r/qjYkyQyKT8D/5jYkziyKD8btf/gvIVyCxJHFuUnJuCm2JMkMik/g/JusSdJuC4/saM+hFVvttiTOLIoP3H8XBB7kkQW5acZLq0Te5KE6/ITq/+xWJMkMik/q/5RsSdJuC4/sZu+h8PeArEnSbguP+F3Q6yJDRmUnzvFmiThuvzEZL4PB7xZYk+ScF1+4mF+XqyJDa7Lz7BaXi3WJAnX5SeOn0diTWzIoPw8ItbEBpflZ2MnDXrzxZrY4LL8xGT2iy2xwX356W8Xa2KDy/ITO+ldGHozxZrY4LL8hNc5sSU2uCw/4WOwm1aKNbHBZfmJ42dYbIktTsvPqn9IbIktLstPV8JRdl2G191k1fuZRo0qqigf4Lh+9zOtGg/xur9Nhtf9uCw/XQjjuSxD636y+upRu8JYXkZjkuF1P67f/UwjhD9ugtJGGVoxcFl+phUWw2kZVnH4X8pPhP+Anxu3QRh6MxDeZy1UW2EXfgmH/eViSaYDwl+jhTodYQIOih2ZLmHNP6yFaiuEf1usSDsgwH4tWBvh+fPRDM1dLFakHXAEvdXCtRGu5bfk04DVv0wL1kYI/6rYkHYxtcoBLdwkIfw3YdXrFRvSLjjDr2kBxwm75pcJKlvEgqQBYb7SQo4TruFnxS4wwZwlWsBxMjX/afjCK4sFSYMJSvu0kFspesfV1Mtr5XKSFpz/V7SgWwkPXv4unEtwlj/XgtaE8Iei94zkUpKW6Ic2cKT81sKeLLxuzFR7lsqlxAU4fvZqYWsy9dJ+uYy4AsfPRS3sycLqL0ZbSd5gAp5ogTcLu6Q4bSV5Yka8eZiAn1roE8LKL1ZbSZ4g/B1a6M3Ca4rTVpI3CPesFvqEsPqL1VaSNzjb61rwkRB+8dpK8iSsehXsgB9a+JHwD1fx2kryxNQrW7XgIyF8tpVkDY6fM2r4bCvJB0zAvRYTwLaSrIl+6RBBf1XCZ1tJHph6z6ap4bOtJDcQ9qkpE8C2kvxAjX9nUvhsK8mL6BvvmICxpvDZVpInpl7a8C98tpXkj6n6x5smgG0leYPgBxrhs62kMzTKTbaVdAYzUl71d/WzraQjRL/7gPDZVtIp8NDtY1tJBzG1ymb5kxBCCCGEdDme9webl+1tevVLuQAAAABJRU5ErkJggg==">
+      <div class="card-body text-warning">
+        <p class="card-text-center">Realiza hoy mismo tu servicio </p>
+        <button style="margin-left: 15%;" ion-button color="danger" round (click)="mostrarProveedor()">¡Vamos!</button>
+      </div>
+    </div>
+    <div class="card border-info mb-3" style="max-width: 18rem;margin-left: 25%;">
+      <img src="data:image/png;base64,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">
+      <div class="card-body text-info">
+        <h5 class="card-title">Programa tu servicio</h5>
+        <p class="card-text">selecciona una fecha y trabajador para tu servicio</p>
+        <button style="margin-left: 15%;" ion-button color="danger" round (click)="mostrarProveedor()">¡Vamos!</button>
+      </div>
+    </div>
+
+
+</ion-content>

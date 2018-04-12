@@ -1,0 +1,37 @@
+
+<ion-header>
+
+  <ion-navbar color="amarillo">
+    <ion-title text-center>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label floating>Correo Electronico</ion-label>
+            <ion-input type="email"
+                      required name="correo"
+                       ngModel></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label floating>Contraseña</ion-label>
+            <ion-input type="password" 
+                      required 
+                       name="clave" 
+                      ngModel 
+                      minLegth="8"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+  <button color="amarillo" ion-button full block (click)="login()">Iniciar Sesion</button>
+  <button color="negro" ion-button full block >Registrar</button>
+
+</ion-content>
